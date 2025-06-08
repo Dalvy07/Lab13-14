@@ -1,0 +1,28 @@
+services:
+  nginx:
+    image: nginx:1.25
+    container_name: nginx_container
+    networks:
+      - frontend
+      - backend
+
+  php:
+    image: php:8.2-fpm
+    container_name: php_container
+    networks:
+      - backend
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - backend
+
+volumes:
+  mysql_data:
+
+networks:
+  frontend:
+  backend:
