@@ -2,18 +2,18 @@
 
 ## Uruchomienie
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Wyłączanie
 ```bash
-docker-compose down     # Zachowuje dane
-docker-compose down -v  # Usuwa dane
+docker compose down     # Zachowuje dane
+docker compose down -v  # Usuwa dane
 ```
 
 ## Inne środowiska
 ```bash
-docker-compose -f docker-compose.base.yml -f docker-compose.override.yml up -d
+docker compose -f docker-compose.base.yml -f docker-compose.override.yml up -d
 ```
 
 ## Dostęp
